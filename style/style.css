@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+.outfit-font {
+  font-family: "Outfit", sans-serif;
+}
+
+
+.btn.w-full {
+  width: 100% !important;
+}
