@@ -25,6 +25,31 @@ document
     document.getElementById("account-balance").innerText = totalNewBalance;
   });
 
+// CASH OUT SECTION
+
+document.getElementById("cashout-btn").addEventListener("click", function (e) {
+  e.preventDefault();
+
+  const agentNumber = document.getElementById("agent-account-number").value;
+  const amountToMinus = parseInt(
+    document.getElementById("amount-to-cashout").value
+  );
+  const pinToCashout = document.getElementById("pin-to-cashout").value;
+
+  const accountBalance = parseInt(
+    document.getElementById("account-balance").innerText
+  );
+
+  const totalNewBalance = accountBalance - amountToMinus;
+
+  document.getElementById("account-balance").innerText = totalNewBalance;
+
+  if (amountToMinus > accountBalance) {
+    alert(" You don’t have enough balance to cash!");
+    return; // stop execution
+  }
+});
+
 // TOGGLING FEATURE
 
 document.getElementById("add-button").addEventListener("click", function () {
