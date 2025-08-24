@@ -1,13 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
 
-*{
+* {
   font-family: "Outfit", sans-serif;
 }
 
-
-
-
-
 .btn.w-full {
   width: 100% !important;
+}
+
+.selected {
+  border-color: #3b82f6;
+  background-color: #eff6ff;
+  color: #2563eb;
 }

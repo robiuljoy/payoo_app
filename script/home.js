@@ -24,3 +24,52 @@ document
 
     document.getElementById("account-balance").innerText = totalNewBalance;
   });
+
+// TOGGLING FEATURE
+
+document.getElementById("add-button").addEventListener("click", function () {
+  document.getElementById("cashout-parent").style.display = "none";
+  document.getElementById("add-money-parent").style.display = "block";
+  document.getElementById("transfer-parent").style.display = "none";
+});
+
+document
+  .getElementById("cash-out-button")
+  .addEventListener("click", function () {
+    document.getElementById("add-money-parent").style.display = "none";
+    document.getElementById("cashout-parent").style.display = "block";
+    document.getElementById("transfer-parent").style.display = "none";
+  });
+
+// TOGGLING FAETURE FOR TRANSFER MONEY
+
+document
+  .getElementById("transfer-money-button")
+  .addEventListener("click", function () {
+    document.getElementById("cashout-parent").style.display = "none";
+    document.getElementById("add-money-parent").style.display = "none";
+    document.getElementById("transfer-parent").style.display = "block";
+  });
+
+// BUTTON SELECTED
+const addBtn = document.getElementById("add-button");
+const cashOutBtn = document.getElementById("cash-out-button");
+const transferBtn = document.getElementById("transfer-money-button");
+
+addBtn.addEventListener("click", function () {
+  addBtn.classList.add("selected");
+  cashOutBtn.classList.remove("selected");
+  transferBtn.classList.remove("selected");
+});
+
+cashOutBtn.addEventListener("click", function () {
+  cashOutBtn.classList.add("selected");
+  addBtn.classList.remove("selected");
+  transferBtn.classList.remove("selected");
+});
+
+transferBtn.addEventListener("click", function () {
+  cashOutBtn.classList.remove("selected");
+  addBtn.classList.remove("selected");
+  transferBtn.classList.add("selected");
+});
